@@ -20,7 +20,7 @@ function watch(done){
 }
 
 function build(done){
-	htmlTask();
+	htmlTask(done);
 	scssTask();
 	jsTask();
 	imageTask();
