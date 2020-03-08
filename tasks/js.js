@@ -10,7 +10,7 @@ var babel = require("gulp-babel");
 function jsTask(){
 	return gulp.src("src/js/*.js")
 	.pipe(sourcemaps.init())
-	.pipe(concat('all.js'))
+	// .pipe(concat('all.js'))
 	.pipe(babel({
 		presets:['@babel/env']
 	}))

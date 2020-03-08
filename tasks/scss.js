@@ -10,7 +10,7 @@ function scssTask(){
 	return gulp.src("src/scss/*.scss")
 	.pipe(sourcemaps.init())
 	.pipe(sass().on("error", sass.logError))
-	.pipe(concat('styles.css')) // compiler alle scss filer til en enkelt css fil
+	// .pipe(concat('styles.css')) // compiler alle scss filer til en enkelt css fil
 	.pipe(cleanCSS())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest("dist/css"))
