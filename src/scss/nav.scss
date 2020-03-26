@@ -28,6 +28,7 @@ html{
 
 
 .nav__ul{
+	transition: all .3s ease-in-out;
 	display:block;
 	list-style-type: none;
 	padding: 0;
@@ -37,7 +38,6 @@ html{
 	opacity:0;
 	height:0;
 	overflow:hidden;
-	transition: all .3s ease-in-out;
 }
 
 .nav__li{
