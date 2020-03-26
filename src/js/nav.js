@@ -3,6 +3,9 @@ let hamburger = document.querySelector('.hamburger');
 
 
 hamburger.addEventListener('click',(e)=>{
+	if(!navUlElement.classList.contains('nav__ul--animation')){
+		navUlElement.classList.add('nav__ul--animation');
+	}
 	hamburger.classList.toggle('is-active');
 	let ulHeight = navUlElement.scrollHeight;
 	if(!navUlElement.classList.contains('open-menu')){
