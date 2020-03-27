@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/shared.css">
 	<link rel="stylesheet" href="/css/nav.css">
 	<link rel="stylesheet" href="/css/index.css">
-	<title>Document</title>
+	<title>Home</title>
 </head>
 <body class="reset">
 
@@ -14,6 +14,17 @@
 		<header>
 			<%- include('includes/nav.ejs') %>
 		</header>
+
+		<main>
+
+			<h1 class="home__name">Mikkel Back Koll</h1>
+			<h2 class="home__profession">Front End Developer</h2>
+			<div class="home__link-container">
+				<a href="/work/" class="home__projects">View Projects</a>
+				<a href="/resume/" class="home__resume">View Resume</a>
+			</div>
+
+		</main>
 
 	</div>
 

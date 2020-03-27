@@ -1,7 +1,54 @@
+@import 'variables';
+
 .home__wrapper{
     min-height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('/img/code_computer.jpg');
+	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('/img/code_computer.jpg');
 	background-position:center;
 	background-repeat: no-repeat;
 	background-size:cover;
+
 }
+main{
+	text-align:center;
+	.home__name{
+		font-size:40px;
+		font-weight:400;
+		letter-spacing: 1px;
+	}
+
+	.home__profession{
+		font-weight:400;
+	}
+	.home__link-container{
+		padding-top:45px;
+		a{
+			text-decoration: none;
+			color:unset;
+			margin: 0 7px;
+			border: 1.5px solid rgba(255, 255, 255, 0.781);
+			background: rgba(0,0,0, .5);
+			border-radius:3px;
+			padding:7px;
+			font-size:16px;
+			font-weight:600;
+			transition:all .3s ease-in-out;
+		}
+	}
+}
+
+@media(min-width: 749px){
+
+	main{
+		.home__name{
+			font-size:45px;
+			letter-spacing: 1px;
+		}
+
+		a:hover{
+			background: $home-link-background;
+		}
+
+	}
+
+}
+
