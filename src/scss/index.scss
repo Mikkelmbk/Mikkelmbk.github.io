@@ -19,8 +19,8 @@ main{
 	.home__profession{
 		font-weight:400;
 	}
-	.home__link-container{
-		padding-top:45px;
+	.home__internal-link-container{
+		padding:45px 0;
 		a{
 			text-decoration: none;
 			color:unset;
@@ -33,6 +33,29 @@ main{
 			font-weight:600;
 			transition:all .3s ease-in-out;
 		}
+	}
+	.home__external-link-container{
+		display:flex;
+		justify-content: center;
+		flex-wrap:wrap;
+		.home__SoMe-link{
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			border:2px solid white;
+			border-radius:50%;
+			width:60px;
+			height:60px;
+			margin: 0 10px;
+			text-decoration: none;
+			color:unset;
+			transition:all .3s ease-in-out;
+			i{
+				font-size:38px;
+			}
+
+		}
+
 	}
 }
 
@@ -47,6 +70,10 @@ main{
 		a:hover{
 			background: $home-link-background;
 		}
+	
+
+		
+
 
 	}
 
