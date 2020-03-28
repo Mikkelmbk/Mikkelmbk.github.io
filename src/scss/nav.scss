@@ -108,4 +108,12 @@
 		padding-bottom:10px;
 	}
 
+	.nav__a{
+		transition: all .2s ease-in-out;
+	}
+
+	.nav__a:hover{
+		color:rgba(199, 129, 0, 0.486);
+	}
+
 }

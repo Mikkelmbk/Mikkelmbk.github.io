@@ -2,7 +2,7 @@
 
 .home__wrapper{
     min-height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('/img/code_computer.jpg');
+	background: $imaged-background;
 	background-position:center;
 	background-repeat: no-repeat;
 	background-size:cover;
@@ -68,7 +68,7 @@ main{
 		}
 
 		a:hover{
-			background: $home-link-background;
+			background: $hover-link-background;
 		}
 	
 
