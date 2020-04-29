@@ -30,7 +30,7 @@ db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk 
             workDomainLinkElem.href = project.data().domain;
             workDomainLinkElem.target = "_blank";
             workDomainLinkElem.innerHTML = "Visit Domain";
-            workInternalLinkElem.href = `#`;
+            workInternalLinkElem.href = `${window.location.origin}/project/?id=${project.data().projectId}`;
             workInternalLinkElem.innerHTML = "View Project";
 
             workProjectWrapperElem.appendChild(workProjectContainerElem);
