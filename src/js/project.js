@@ -10,8 +10,12 @@ if (URLparams.get('id') != null || URLparams.get('id') != "") {
         .then((project) => {
             project.forEach((doc) => {
                 console.log('doc: ', doc.data());
+
+                let projectTitleElem = document.querySelector('.project__title');
+
+                projectTitleElem.innerHTML = doc.data().title;
+                
+
             })
-    
-    
         })
 }
