@@ -9,7 +9,7 @@
             align-items:center;
 
             .resume__person-image{
-                width: 30%;
+                width: 25%;
                 border-radius:10px;
                 margin-right:15px;
             }
@@ -46,7 +46,7 @@
                 margin-left:28px;
 
                 .resume__profile-paragraph{
-                    margin:7px 0;
+                    margin:7px 0 20px 0;
                 }
 
             }
@@ -54,7 +54,7 @@
 
 
         .resume__employment{
-            margin-top:30px;
+            margin-top:40px;
 
             .resume__employment-title-container{
                 display:flex;
@@ -68,7 +68,7 @@
             }
 
             .resume__employment-occupation{
-                margin: 0 0 40px 30px;
+                margin: 0 0 30px 30px;
 
                 .resume__employment-occupation-title{
                     margin: 7px 0 2px 0;
@@ -95,6 +95,7 @@
         }
 
         .resume__education{
+            margin-top:40px;
 
             .resume__education-title-container{
                 display:flex;
@@ -109,7 +110,7 @@
 
 
             .resume__education-occupation{
-                margin: 0 0 40px 30px;
+                margin: 0 0 30px 30px;
 
                 .resume__education-occupation-title{
                     margin: 7px 0 2px 0;
@@ -138,4 +139,12 @@
         
         
     }
+}
+
+
+
+@media(min-width: 749px){
+
+	
+
 }
