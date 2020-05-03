@@ -1,8 +1,6 @@
 .resume__wrapper{
     padding-top:10px;
     margin:0 4%;
-    height:300px;
-
 
     .resume__primary{
 
@@ -24,18 +22,19 @@
 
                 .resume__person-title{
                     margin:5px 0 0 0;
-                    color:rgba(255, 255, 255, 0.596)
+                    color:rgba(255, 255, 255, 0.596);
                 }
 
             }
         }
 
         .resume__profile{
-            margin-top:40px;
+            margin-top:30px;
 
             .resume__profile-title-container{
                 display:flex;
                 align-items:center;
+                color:rgb(226, 148, 2);
 
                 .resume__profile-title{
                     margin:0 12px;
@@ -46,8 +45,97 @@
             .resume__profile-paragraph-container{
                 margin-left:28px;
 
+                .resume__profile-paragraph{
+                    margin:7px 0;
+                }
+
             }
         }
+
+
+        .resume__employment{
+            margin-top:30px;
+
+            .resume__employment-title-container{
+                display:flex;
+                align-items:center;
+                color:rgb(226, 148, 2);
+
+                .resume__employment-title{
+                    margin:0 12px;
+                    font-weight:400;
+                }
+            }
+
+            .resume__employment-occupation{
+                margin: 0 0 40px 30px;
+
+                .resume__employment-occupation-title{
+                    margin: 7px 0 2px 0;
+                    color:rgb(253, 203, 110);
+                    font-weight: 400;
+                }
+
+                .resume__employment-occupation-duration{
+                    margin:0;
+                    color:rgba(255, 255, 255, 0.596);
+                    font-size:14px;
+                }
+
+                .resume__employment-occupation-description{
+
+
+                    li{
+                        padding:0 0 5px 0;
+                    }
+
+                }
+            }
+
+        }
+
+        .resume__education{
+
+            .resume__education-title-container{
+                display:flex;
+                align-items:center;
+                color:rgb(226, 148, 2);
+
+                .resume__education-title{
+                    margin:0 12px;
+                    font-weight:400;
+                }
+            }
+
+
+            .resume__education-occupation{
+                margin: 0 0 40px 30px;
+
+                .resume__education-occupation-title{
+                    margin: 7px 0 2px 0;
+                    color:rgb(253, 203, 110);
+                    font-weight: 400;
+                }
+
+                .resume__education-occupation-duration{
+                    margin:0;
+                    color:rgba(255, 255, 255, 0.596);
+                    font-size:14px;
+                }
+
+                .resume__education-occupation-description{
+
+
+                    li{
+                        padding:0 0 5px 0;
+                    }
+
+                }
+            }
+
+        }
+
+        
         
     }
 }
