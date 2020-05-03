@@ -1,65 +1,66 @@
 @import 'variables';
 
-header{
-	background: transparent;
-}
 
-.home__wrapper{
-    min-height: 100vh;
+.home__wrapper-outer{
+	min-height: 100vh;
 	background: $imaged-background;
 	background-position:center;
 	background-repeat: no-repeat;
 	background-size:cover;
-
-}
-main{
-	text-align:center;
-	.home__name{
-		font-size:40px;
-		font-weight:400;
-		letter-spacing: 1px;
+	
+	header{
+		background: transparent;
 	}
-
-	.home__profession{
-		font-weight:400;
-	}
-	.home__internal-link-container{
-		padding:45px 0;
-		a{
-			text-decoration: none;
-			color:unset;
-			margin: 0 7px;
-			border: 1.5px solid rgba(255, 255, 255, 0.781);
-			background: rgba(0,0,0, .5);
-			border-radius:3px;
-			padding:7px;
-			font-size:16px;
-			font-weight:600;
-			transition:all .3s ease-in-out;
+	
+	main{
+		text-align:center;
+		.home__name{
+			font-size:40px;
+			font-weight:400;
+			letter-spacing: 1px;
 		}
-	}
-	.home__external-link-container{
-		display:flex;
-		justify-content: center;
-		flex-wrap:wrap;
-		.home__SoMe-link{
+	
+		.home__profession{
+			font-weight:400;
+		}
+		.home__internal-link-container{
+			padding:45px 0;
+			a{
+				text-decoration: none;
+				color:unset;
+				margin: 0 7px;
+				border: 1.5px solid rgba(255, 255, 255, 0.781);
+				background: rgba(0,0,0, .5);
+				border-radius:3px;
+				padding:7px;
+				font-size:16px;
+				font-weight:600;
+				transition:all .3s ease-in-out;
+			}
+		}
+		.home__external-link-container{
 			display:flex;
 			justify-content: center;
-			align-items: center;
-			border:2px solid white;
-			border-radius:50%;
-			width:60px;
-			height:60px;
-			margin: 0 10px;
-			text-decoration: none;
-			color:unset;
-			transition:all .3s ease-in-out;
-			i{
-				font-size:38px;
+			flex-wrap:wrap;
+			.home__SoMe-link{
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				border:2px solid white;
+				border-radius:50%;
+				width:60px;
+				height:60px;
+				margin: 0 10px;
+				text-decoration: none;
+				color:unset;
+				transition:all .3s ease-in-out;
+				i{
+					font-size:38px;
+				}
+	
 			}
-
+	
 		}
-
 	}
 }
 

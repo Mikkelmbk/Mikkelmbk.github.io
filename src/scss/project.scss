@@ -1,9 +1,17 @@
-.project__wrapper{
-    width:80%;
-    height:200px;
-    margin: 0 auto;
+@import 'variables';
 
-    .project__title{
-        text-align:center;
+
+.project__wrapper-outer{
+    min-height:100vh;
+    background-color: $colored-background;
+
+    .project__wrapper-inner{
+        width:80%;
+        height:200px;
+        margin: 0 auto;
+    
+        .project__title{
+            text-align:center;
+        }
     }
 }

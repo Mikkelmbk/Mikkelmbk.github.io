@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,107 +11,121 @@
 	<link rel="stylesheet" href="/css/resume.css">
 	<title>Resume</title>
 </head>
+
 <body class="reset">
 
-	<header>
-		<%- include('includes/nav.ejs') %>
-	</header>
+	<div class="resume__wrapper-outer">
+		<header>
+			<%- include('includes/nav.ejs') %>
+		</header>
 
-	<main>
-		<div class="resume__wrapper">
-			<div class="resume__primary">
+		<main>
+			<div class="resume__wrapper-inner">
+				<div class="resume__primary">
 
-				<div class="resume__person">
-					<img src="/img/gnomesmile.PNG" alt="" class="resume__person-image">
-					<section class="resume__person-name-title-container">
-						<h1 class="resume__person-name">Mikkel Back Koll</h1>
-						<p class="resume__person-title">Web Developer</p>
-					</section>
+					<div class="resume__person">
+						<img src="/img/gnomesmile.PNG" alt="" class="resume__person-image">
+						<section class="resume__person-name-title-container">
+							<h1 class="resume__person-name">Mikkel Back Koll</h1>
+							<p class="resume__person-title">Web Developer</p>
+						</section>
+					</div>
+
+					<div class="resume__profile">
+						<section class="resume__profile-title-container">
+							<i class="fas fa-user"></i>
+							<h2 class="resume__profile-title">Profile</h2>
+						</section>
+
+						<section class="resume__profile-paragraph-container">
+							<p class="resume__profile-paragraph">I am a calm and friendly individual who has passed the
+								web
+								developer education with top marks. I am capable of converting a given layout to a
+								website,
+								work with API's as well as Databases (SQL / NoSQL)</p>
+
+							<p class="resume__profile-paragraph">My ambition is to find a job where there is room for me
+								to
+								learn and gain experience to expand my skill set within the profession, while
+								simultaneously
+								drawing upon the knowledge i bring from my education to further benefit the interests of
+								the
+								company</p>
+						</section>
+					</div>
+
+					<div class="resume__employment">
+						<section class="resume__employment-title-container">
+							<i class="fas fa-briefcase"></i>
+							<h2 class="resume__employment-title">Employment History</h2>
+						</section>
+
+						<section class="resume__employment-occupation">
+							<h3 class="resume__employment-occupation-title">Runner at Mercedes-Benz CPH</h3>
+							<p class="resume__employment-occupation-duration">August 2015 - June 2018</p>
+							<ul class="resume__employment-occupation-description">
+								<li>Prepared products in Mercedes-Benz internal warehouse for both external as well as
+									internal deliveries</li>
+								<li>Stocked up Mercedes-Benz internal warehouse with high demand products for internal
+									workshop</li>
+							</ul>
+						</section>
+
+
+						<section class="resume__employment-occupation">
+							<h3 class="resume__employment-occupation-title">Intern at Hello Retail</h3>
+							<p class="resume__employment-occupation-duration">December 2019 - December 2019</p>
+							<ul class="resume__employment-occupation-description">
+								<li>Webshop package solutions</li>
+								<li>Search functionalities</li>
+								<li>Product recommendations</li>
+							</ul>
+						</section>
+
+					</div>
+
+
+					<div class="resume__education">
+						<section class="resume__education-title-container">
+							<i class="fas fa-user-graduate"></i>
+							<h2 class="resume__education-title">Education</h2>
+						</section>
+
+						<section class="resume__education-occupation">
+							<h3 class="resume__education-occupation-title">Web Developer</h3>
+							<p class="resume__education-occupation-duration">August 2018 - April 2020</p>
+							<ul class="resume__education-occupation-description">
+								<li>Graduated with top marks</li>
+							</ul>
+						</section>
+
+						<section class="resume__education-occupation">
+							<h3 class="resume__education-occupation-title">Math Niveau C</h3>
+							<p class="resume__education-occupation-duration">August 2018 - June 2019</p>
+							<ul class="resume__education-occupation-description">
+								<li>Graduated with top marks</li>
+							</ul>
+						</section>
+
+
+
+					</div>
+
 				</div>
-
-				<div class="resume__profile">
-					<section class="resume__profile-title-container">
-						<i class="fas fa-user"></i>
-						<h2 class="resume__profile-title">Profile</h2>
-					</section>
-
-					<section class="resume__profile-paragraph-container">
-						<p class="resume__profile-paragraph">I am a calm and friendly individual who has passed the web developer education with top marks. I am capable of converting a given layout to a website, work with API's as well as Databases (SQL / NoSQL)</p>
-
-						<p class="resume__profile-paragraph">My ambition is to find a job where there is room for me to learn and gain experience to expand my skill set within the profession, while simultaneously drawing upon the knowledge i bring from my education to further benefit the interests of the company</p>
-					</section>
-				</div>
-
-				<div class="resume__employment">
-					<section class="resume__employment-title-container">
-						<i class="fas fa-briefcase"></i>
-						<h2 class="resume__employment-title">Employment History</h2>
-					</section>
-
-					<section class="resume__employment-occupation">
-						<h3 class="resume__employment-occupation-title">Runner at Mercedes-Benz CPH</h3>
-						<p class="resume__employment-occupation-duration">August 2015 - June 2018</p>
-						<ul class="resume__employment-occupation-description">
-							<li>Prepared products in Mercedes-Benz internal warehouse for both external as well as internal deliveries</li>
-							<li>Stocked up Mercedes-Benz internal warehouse with high demand products for internal workshop</li>
-						</ul>
-					</section>
-
-
-					<section class="resume__employment-occupation">
-						<h3 class="resume__employment-occupation-title">Intern at Hello Retail</h3>
-						<p class="resume__employment-occupation-duration">December 2019 - December 2019</p>
-						<ul class="resume__employment-occupation-description">
-							<li>Webshop package solutions</li>
-							<li>Search functionalities</li>
-							<li>Product recommendations</li>
-						</ul>
-					</section>
-
-				</div>
-
-
-				<div class="resume__education">
-					<section class="resume__education-title-container">
-						<i class="fas fa-user-graduate"></i>
-						<h2 class="resume__education-title">Education</h2>
-					</section>
-
-					<section class="resume__education-occupation">
-						<h3 class="resume__education-occupation-title">Web Developer</h3>
-						<p class="resume__education-occupation-duration">August 2018 - April 2020</p>
-						<ul class="resume__education-occupation-description">
-							<li>Graduated with top marks</li>
-						</ul>
-					</section>
-
-					<section class="resume__education-occupation">
-						<h3 class="resume__education-occupation-title">Math Niveau C</h3>
-						<p class="resume__education-occupation-duration">August 2018 - June 2019</p>
-						<ul class="resume__education-occupation-description">
-							<li>Graduated with top marks</li>
-						</ul>
-					</section>
-
+				<div class="resume__secondary">
 
 
 				</div>
-
 			</div>
-			<div class="resume__secondary">
+		</main>
+	</div>
 
-				
-			</div>
 
-		</div>
-
-	</main>
-
-	
 
 	<script src="/js/firebase-config.js"></script>
 	<script src="/js/shared.js"></script>
 	<script src="/js/nav.js"></script>
 	<script src="/js/resume.js"></script>
 </body>
+
 </html>

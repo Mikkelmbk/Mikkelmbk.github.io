@@ -1,4 +1,4 @@
-let workProjectWrapperElem = document.querySelector('.work__project-wrapper');
+let workProjectWrapperElem = document.querySelector('.work__wrapper-inner');
 
 db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk at forEach.
     .then((projects)=>{
