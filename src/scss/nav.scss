@@ -1,15 +1,19 @@
 @import 'hamburger-library';
 @import 'variables';
 
-.nav{
-	background: transparent;
+header{
 	position:sticky;
+	top:0;
+	background-color:$colored-background;
+	z-index:10;
+}
+
+.nav{
 	display:flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap:wrap;
 	padding:0 4%;
-	top:0;
 	border-bottom: 3px solid $navigation-color;
 }
 
@@ -53,7 +57,7 @@
 }
 
 .open-menu{
-    opacity:1;
+	opacity:1;
 }
 
 .active-menu{
