@@ -7,6 +7,7 @@
 	<%- include('includes/firebase-scripts.ejs') %>
 	<link rel="stylesheet" href="/css/shared.css">
 	<link rel="stylesheet" href="/css/nav.css">
+	<link rel="stylesheet" href="/css/resume.css">
 	<title>Resume</title>
 </head>
 <body class="reset">
@@ -15,10 +16,45 @@
 		<%- include('includes/nav.ejs') %>
 	</header>
 
+	<main>
+		<div class="resume__wrapper">
+			<div class="resume__primary">
+
+				<div class="resume__person">
+					<img src="/img/gnomesmile.PNG" alt="" class="resume__person-image">
+					<section class="resume__person-name-title-container">
+						<h1 class="resume__person-name">Mikkel Back Koll</h1>
+						<p class="resume__person-title">Web Developer</p>
+					</section>
+				</div>
+
+				<div class="resume__profile">
+					<section class="resume__profile-title-container">
+						<i class="fas fa-user"></i>
+						<h2 class="resume__profile-title">Profile</h2>
+					</section>
+
+					<section class="resume__profile-paragraph-container">
+
+						<p class="resume__profile-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis dolor id accusantium placeat commodi ducimus doloremque, autem ab consequatur. Praesentium facilis saepe earum distinctio placeat ipsam temporibus vel minima dignissimos?</p>
+
+					</section>
+
+				</div>
+
+			</div>
+			<div class="resume__secondary">
+			</div>
+
+		</div>
+
+	</main>
+
 	
 
 	<script src="/js/firebase-config.js"></script>
 	<script src="/js/shared.js"></script>
 	<script src="/js/nav.js"></script>
+	<script src="/js/resume.js"></script>
 </body>
 </html>
