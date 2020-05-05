@@ -22,6 +22,7 @@
 	
 		.home__profession{
 			font-weight:400;
+			letter-spacing:1.5px;
 		}
 		.home__internal-link-container{
 			padding:45px 0;
@@ -74,7 +75,7 @@
 			}
 	
 			a:hover{
-				background: $hover-link-background;
+				background: $primary-main-theme;
 			}
 		
 	
