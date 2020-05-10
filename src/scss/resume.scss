@@ -194,6 +194,14 @@
                     }
                 }
 
+                .resume__skills-language{
+                    .resume__skills-skill{
+                        margin:12px 30px;
+                        border-bottom:2px solid $primary-main-theme;
+                        
+                    }
+                }
+
                
             }
         }
@@ -257,6 +265,13 @@
                     .resume__skills-list{
                         .resume__skills-skill{
                             margin:12px 0;
+                        }
+                    }
+
+                    .resume__skills-language{
+                        .resume__skills-skill{
+                            margin:12px 0;
+                            
                         }
                     }
     
