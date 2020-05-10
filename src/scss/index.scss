@@ -1,12 +1,41 @@
 @import 'variables';
 
 
+.reset{
+	position:relative;
+	height:100vh;
+	video{
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		display:block;
+	}
+}
+
+.reset::after{
+	content: '';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0, 0, 0, .7);
+}
+
+
+
 .home__wrapper-outer{
-	min-height: 100vh;
-	background: $imaged-background;
-	background-position:center;
-	background-repeat: no-repeat;
-	background-size:cover;
+	// min-height: 100vh;
+	width:100%;
+	// background: $imaged-background;
+	// background-position:center;
+	// background-repeat: no-repeat;
+	// background-size:cover;
+
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1; // lift the wrapper above the ::after overlay on body
 	
 	header{
 		background: transparent;
