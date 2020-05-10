@@ -16,7 +16,7 @@
                 align-items:center;
     
                 .resume__person-image{
-                    width: 25%;
+                    width:90px;
                     border-radius:10px;
                     margin-right:15px;
                 }
@@ -140,9 +140,62 @@
                 }
     
             }
-    
+
             
             
+            
+        }
+        
+        .resume__secondary{
+            
+            .resume__details{
+                padding-bottom:20px;
+                .resume__details-title-container{
+
+                    .resume__details-title{
+                        margin:0;
+                        font-weight:400;
+                        color:rgb(161, 161, 161);
+                    }
+                }
+
+                .resume__details-info{
+
+                    span{
+                        margin:12px 30px;
+                        display:flex;
+                        align-items:center;
+                        p{
+                            margin:0 8px;
+                        }
+
+                        i{
+                            font-size:20px;
+                        }
+                    }
+
+                }
+            }
+
+            .resume__skills{
+                .resume__skills-title-container{
+                    .resume__skills-title{
+                        margin:0;
+                        font-weight:400;
+                        color:rgb(161, 161, 161);
+                    }
+                }
+
+                .resume__skills-list{
+                    .resume__skills-skill{
+                        margin:12px 30px;
+                        border-bottom:2px solid $primary-main-theme;
+                        
+                    }
+                }
+
+               
+            }
         }
     }
 
@@ -155,20 +208,71 @@
     .resume__wrapper-outer{
         
         .resume__wrapper-inner{
-            padding-top:40px;
-            width: 70%;
+            width: 60%;
             display:flex;
+            background-color:#222;
+            padding: 30px 3%;
+            margin: 20px auto;
+            border-radius:5px;
+            border: 1px solid #333;
+            box-sizing: border-box;
 
             .resume__primary{
                 width:60%;
+                padding-right:20px;
+                box-sizing:border-box;
 
                 .resume__person{
         
                     .resume__person-image{
-                        width: 15%;
+                        width: 100px;
                         border-radius:10px;
                         margin-right:15px;
                     }
+                }
+            }
+
+            .resume__secondary{
+                padding-left:50px;
+                width:40%;
+                box-sizing: border-box;
+                margin-top:110px;
+                // display:flex;
+                // align-items:flex-end;
+                // flex-direction:column;
+
+                .resume__details{
+
+                    .resume__details-info{
+    
+                        span{
+                            margin:12px 0;
+                            display:flex;
+                            align-items:center;
+          
+                        }
+    
+                    }
+                }
+
+                .resume__skills{
+                    .resume__skills-title-container{
+                        .resume__skills-title{
+                            margin:0;
+                            font-weight:400;
+                            color:rgb(161, 161, 161);
+                        }
+                    }
+    
+                    .resume__skills-list{
+                        .resume__skills-skill{
+                            margin:12px 0;
+                            border-bottom:2px solid $primary-main-theme;
+                            
+                        }
+                    }
+    
+                   
                 }
             }
         }

@@ -20,7 +20,8 @@ header{
 
 .nav__h1 a{
     color:unset;
-    text-decoration: none;
+	text-decoration: none;
+	user-select: none;
 }
 
 
@@ -43,6 +44,7 @@ header{
 .nav__li{
 	width:100%;
 	padding: 0 0 10px 0;
+	user-select: none;
 }
 
 .nav__a{
