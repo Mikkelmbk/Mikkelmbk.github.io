@@ -47,6 +47,11 @@ db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk 
 
           
         })
+
+        workProjectWrapperElem.classList.remove('invisible');
+        workProjectWrapperElem.classList.add('visible');
+
+
     })
 
 

@@ -1,4 +1,5 @@
 let resumeSkillsListElem = document.querySelector('.resume__skills-list');
+let resumeWrapperInnerElem = document.querySelector('.resume__wrapper-inner');
 
 db.collection('skills').orderBy('order').get() // uden doc() hvis du skal hente det hele, husk at forEach.
     .then((skills)=>{
@@ -15,4 +16,7 @@ db.collection('skills').orderBy('order').get() // uden doc() hvis du skal hente 
             
           
         })
+        resumeWrapperInnerElem.classList.remove('invisible');
+        resumeWrapperInnerElem.classList.add('visible');
+
     })

@@ -10,3 +10,15 @@ html{
 	margin: 0;
 	background-color: $colored-background;
 }
+
+.invisible{
+	opacity:0;
+}
+
+.transition-opacity{
+	transition: opacity .3s ease-in;
+}
+
+.visible{
+	opacity:1;
+}
