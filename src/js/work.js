@@ -3,8 +3,8 @@ let workProjectWrapperElem = document.querySelector('.work__wrapper-inner');
 db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk at forEach.
     .then((projects)=>{
         projects.forEach((project)=>{
-            console.log('project: ', project.data());
-            console.log('project: ', project.id);
+            // console.log('project: ', project.data());
+            // console.log('project: ', project.id);
 
             let workProjectContainerElem = document.createElement('div');
             let workBackgroundImageElem = document.createElement('img');
@@ -49,8 +49,6 @@ db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk 
         })
 
         workProjectWrapperElem.classList.remove('invisible');
-        workProjectWrapperElem.classList.add('visible');
-
 
     })
 

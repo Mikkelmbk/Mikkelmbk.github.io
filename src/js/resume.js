@@ -17,6 +17,5 @@ db.collection('skills').orderBy('order').get() // uden doc() hvis du skal hente 
           
         })
         resumeWrapperInnerElem.classList.remove('invisible');
-        resumeWrapperInnerElem.classList.add('visible');
 
     })
