@@ -1,20 +1,23 @@
 let resumeSkillsListElem = document.querySelector('.resume__skills-list');
 let resumeWrapperInnerElem = document.querySelector('.resume__wrapper-inner');
 
-db.collection('skills').orderBy('order').get() // uden doc() hvis du skal hente det hele, husk at forEach.
-    .then((skills)=>{
+fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/skills')
+    .then((res) => {
+        return res.json();
+    })
+    .then((skills) => {
 
-        skills.forEach((skill)=>{
+        skills.forEach((skill) => {
 
-        let resumeSkillItemElem = document.createElement('p');
+            let resumeSkillItemElem = document.createElement('p');
 
-        resumeSkillItemElem.classList.add('resume__skills-skill');
+            resumeSkillItemElem.classList.add('resume__skills-skill');
 
-        resumeSkillItemElem.innerHTML = skill.data().title;
+            resumeSkillItemElem.innerHTML = skill.title;
 
-        resumeSkillsListElem.appendChild(resumeSkillItemElem);
-            
-          
+            resumeSkillsListElem.appendChild(resumeSkillItemElem);
+
+
         })
         resumeWrapperInnerElem.classList.remove('invisible');
 

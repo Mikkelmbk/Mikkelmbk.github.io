@@ -1,10 +1,12 @@
 let workProjectWrapperElem = document.querySelector('.work__wrapper-inner');
 
-db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk at forEach.
-    .then((projects)=>{
-        projects.forEach((project)=>{
-            // console.log('project: ', project.data());
-            // console.log('project: ', project.id);
+fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/projects')
+    .then((res) => {
+        return res.json()
+    })
+    .then((projects) => {
+        projects.forEach((project) => {
+        // console.log('project: ', project.image);
 
             let workProjectContainerElem = document.createElement('div');
             let workBackgroundImageElem = document.createElement('img');
@@ -22,15 +24,15 @@ db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk 
             workDomainLinkElem.classList.add('work__link');
             workInternalLinkElem.classList.add('work__link');
 
-            workBackgroundImageElem.src = project.data().image;
-            workProjectTitleElem.innerHTML = project.data().title;
-            workGithubLinkElem.href = project.data().githubRepo;
+            workBackgroundImageElem.src = project.image;
+            workProjectTitleElem.innerHTML = project.title;
+            workGithubLinkElem.href = project.githubRepo;
             workGithubLinkElem.innerHTML = "Github Repo";
             workGithubLinkElem.target = "_blank";
-            workDomainLinkElem.href = project.data().domain;
+            workDomainLinkElem.href = project.domain;
             workDomainLinkElem.target = "_blank";
             workDomainLinkElem.innerHTML = "Visit Domain";
-            workInternalLinkElem.href = `${window.location.origin}/project/?id=${project.data().projectId}`;
+            workInternalLinkElem.href = `${window.location.origin}/project/?id=${project.projectId}`;
             workInternalLinkElem.innerHTML = "View Project";
 
             workProjectWrapperElem.appendChild(workProjectContainerElem);
@@ -40,12 +42,6 @@ db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk 
             workLinkContainerElem.appendChild(workGithubLinkElem);
             workLinkContainerElem.appendChild(workDomainLinkElem);
             workProjectContainerElem.appendChild(workInternalLinkElem);
-
-
-
-
-
-          
         })
 
         workProjectWrapperElem.classList.remove('invisible');
@@ -53,9 +49,4 @@ db.collection('projects').get() // uden doc() hvis du skal hente det hele, husk 
     })
 
 
-    
-// db.collection('users').doc('W2C8Q9RbRh71nCX2KFTN').get() // doc() hvis du kun skal hente et specifikt dokument.
-//     .then((users)=>{
-//     console.log('users: ', users.data());
-        
-//     })
+

@@ -3,19 +3,14 @@ let URLparams = new URLSearchParams(window.location.search);
 
 
 if (URLparams.get('id') != null || URLparams.get('id') != "") {
-    
-    db.collection('projects')
-        .where('projectId', '==', parseInt(URLparams.get('id')))
-        .get()
+
+    fetch(`https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/projects/${parseInt(URLparams.get('id'))}`)
+        .then((res) => {
+            return res.json();
+        })
         .then((project) => {
-            project.forEach((doc) => {
-                console.log('doc: ', doc.data());
+            let projectTitleElem = document.querySelector('.project__title');
+            projectTitleElem.innerHTML = project.title;
 
-                let projectTitleElem = document.querySelector('.project__title');
-
-                projectTitleElem.innerHTML = doc.data().title;
-                
-
-            })
         })
 }
