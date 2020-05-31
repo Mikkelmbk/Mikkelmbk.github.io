@@ -12,5 +12,7 @@ if (URLparams.get('id') != null || URLparams.get('id') != "") {
             let projectTitleElem = document.querySelector('.project__title');
             projectTitleElem.innerHTML = project.title;
 
+
+            loadingOverlayElem.classList.add('display-none');
         })
 }
