@@ -6,7 +6,6 @@ fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/projects')
     })
     .then((projects) => {
         projects.forEach((project) => {
-        // console.log('project: ', project.image);
 
             let workProjectContainerElem = document.createElement('div');
             let workBackgroundImageElem = document.createElement('img');
@@ -32,7 +31,7 @@ fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/projects')
             workDomainLinkElem.href = project.domain;
             workDomainLinkElem.target = "_blank";
             workDomainLinkElem.innerHTML = "Visit Domain";
-            workInternalLinkElem.href = `${window.location.origin}/project/?id=${project.projectId}`;
+            workInternalLinkElem.href = `${window.location.origin}/project/?id=${project.docId}`;
             workInternalLinkElem.innerHTML = "View Project";
 
             workProjectWrapperElem.appendChild(workProjectContainerElem);
