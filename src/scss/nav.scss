@@ -9,6 +9,10 @@ header{
 	border-bottom: 3px solid $primary-main-theme;
 }
 
+.animation__line{
+	display:none;
+}
+
 .nav{
 	display:flex;
 	justify-content: space-between;
@@ -67,15 +71,6 @@ header{
     color:$primary-main-theme;
 }
 
-// .active-menu::after{
-//     content: '';
-//     height:3px;
-//     display:block;
-//     width:30%;
-//     margin: 0 auto;
-//     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.308) 0%, rgba(0, 0, 0, 0) 75%);
-// }
-
 .hamburger{
 	outline:none;
 	user-select:none;
@@ -104,6 +99,7 @@ header{
 		width:unset;
 		opacity:1;
 		height:unset;
+		position: relative;
 	}
 
 	
@@ -121,6 +117,18 @@ header{
 
 	.nav__a:hover{
 		color:$primary-main-theme;
+	}
+
+	.animation__line{
+		height: 10px;
+		width: 20px;
+		bottom:0;
+		display: block;
+		content: " ";
+		border-top: 1px solid $primary-main-theme;
+		position: absolute;
+		transition: all 1s;
+		pointer-events:none;
 	}
 
 }
