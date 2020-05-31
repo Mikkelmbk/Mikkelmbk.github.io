@@ -16,6 +16,10 @@ html{
 	opacity:0;
 }
 
+.display-none {
+	display:none !important;
+}
+
 .transition-opacity{
 	transition: opacity .3s ease-in;
 }
@@ -35,6 +39,24 @@ html{
     text-decoration:none;
     color:unset;
     border-radius:3px;
+}
+
+
+.pulsate {
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.4;
+}
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.4;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.4;
+    }
 }
 
 

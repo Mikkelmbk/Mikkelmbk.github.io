@@ -42,7 +42,7 @@ fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/projects')
             workLinkContainerElem.appendChild(workDomainLinkElem);
             workProjectContainerElem.appendChild(workInternalLinkElem);
         })
-
+        loadingOverlayElem.classList.add('display-none');
         workProjectWrapperElem.classList.remove('invisible');
 
     })

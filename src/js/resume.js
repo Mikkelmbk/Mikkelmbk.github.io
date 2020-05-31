@@ -19,6 +19,7 @@ fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/skills')
 
 
         })
+        loadingOverlayElem.classList.add('display-none');
         resumeWrapperInnerElem.classList.remove('invisible');
 
-    })
+    });

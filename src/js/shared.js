@@ -1,4 +1,5 @@
 var matchMobile = window.matchMedia("(max-width:749px)");
+let loadingOverlayElem = document.querySelector('.loading-overlay');
 
 var toTop = document.querySelector('.wrapper__span-to-top');
 document.addEventListener('scroll', () => {
