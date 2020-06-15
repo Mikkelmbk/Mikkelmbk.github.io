@@ -3,4 +3,97 @@
 .contact__wrapper-outer{
     min-height:100vh;
     background-color: $colored-background;
+    
+
+    
+    .contact__wrapper-inner{
+        padding-top:10px;
+        width:90%;
+        margin: 0 auto;
+
+        .contact__description{
+
+            padding-bottom:40px;
+            h1{
+                margin-bottom:0;
+            }
+            h3{
+                margin-top:10px;
+                
+            }
+            span{
+                color: $primary-main-theme;
+            }
+        }
+
+        .contact__info{
+            h3{
+                margin-bottom:0;
+                color: $primary-sub-theme;
+            }
+            h4{
+                margin-top:7px;
+            }
+            a{
+                margin-top: 7px;
+                display:inline-block;
+                text-decoration: none;
+                color:unset;
+            }
+            
+        }
+    }
+    
+
+
+}
+
+
+@media(min-width: 749px){
+
+
+    .contact__wrapper-outer{
+        
+    
+        
+        .contact__wrapper-inner{
+            width: 60%;
+            padding-top:80px;
+            // text-align:center;
+            
+    
+            .contact__description{
+    
+                
+                h1{
+                    
+                    font-size:72px;
+                }
+                h3{
+                    font-size:35px;
+                    
+                }
+                span{
+                    
+                }
+            }
+    
+            .contact__info{
+                display:flex;
+            
+              
+                .contact__info-email-phone{
+                    margin-right:130px;
+                }
+                
+            }
+        }
+        
+    
+    
+    }
+    
+
+
+
 }
