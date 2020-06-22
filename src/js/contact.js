@@ -1,10 +1,11 @@
 let contactFormElem = document.querySelector('.contact__form');
+let contactFormBtnElem = document.querySelector('.contact__form-button');
+let preventSpaam = false;
 
 
 
 contactFormElem.addEventListener('submit', (e) => {
     e.preventDefault();
-
     let validate = true;
     let contactMessageElem = document.querySelector('.contact__message');
     let name = contactFormElem.name;
@@ -49,21 +50,36 @@ contactFormElem.addEventListener('submit', (e) => {
 
 
     if (validate) {
+        if (!preventSpaam) {
+            preventSpaam = true;
+            console.log('preventSpaam: ', preventSpaam);
 
+            contactFormBtnElem.style.opacity = 0.2;
+            contactFormBtnElem.innerHTML = "Loading";
 
-        fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/send', {
-            "method": "POST",
-            "headers": {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            "body": `name=${name.value}&email=${email.value}&phone=${phone.value}&subject=${subject.value}&message=${message.value}`
-        })
-            .then((res) => {
-                console.log('res: ', res);
-                if (res.status === 200) {
-                    contactMessageElem.innerHTML = "Thank you for your message, I will get back to you shortly!";
-                }
+            fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/send', {
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "body": `name=${name.value}&email=${email.value}&phone=${phone.value}&subject=${subject.value}&message=${message.value}`
             })
+                .then((res) => {
+                    if (res.status === 200) {
+                        contactMessageElem.innerHTML = "Thank you for your message, I will get back to you shortly!";
+                        contactFormBtnElem.style.opacity = 1;
+                        contactFormBtnElem.innerHTML = "Success";
+                        contactFormBtnElem.style.backgroundColor = "Green";
+                        name.value = "";
+                        email.value = "";
+                        phone.value = "";
+                        subject.value = "";
+                        message.value = "";
+                    }
+                })
+        }
+
+
 
 
 
@@ -71,6 +87,7 @@ contactFormElem.addEventListener('submit', (e) => {
 
 
     }
+
 
 
 
