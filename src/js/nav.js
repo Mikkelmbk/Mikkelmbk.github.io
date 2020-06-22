@@ -42,7 +42,7 @@ else {
 
 	function animateLine(index) {
 		animation__lineElem.style.opacity = 1;
-		console.log('index: ', index);
+		// console.log('index: ', index);
 		let position = anchorElems[index].offsetLeft + parseInt(window.getComputedStyle(anchorElems[index], null).getPropertyValue('padding-left').split("px")[0]) + "px";
 		let width = anchorElems[index].offsetWidth - parseInt(window.getComputedStyle(anchorElems[index], null).getPropertyValue('padding-left').split("px")[0]) - parseInt(window.getComputedStyle(anchorElems[index], null).getPropertyValue('padding-right').split("px")[0]) + "px";
 

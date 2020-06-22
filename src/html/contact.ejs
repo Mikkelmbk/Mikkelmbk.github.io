@@ -31,24 +31,20 @@
 
 				</div>
 
-				<div class="contact__info">
-					<section class="contact__info-email-phone">
-						<h3>Email</h4>
-						<h4>Mikkelmbk@live.dk</h5>
-						<h3>Phone</h4>
-						<h4>+45 21 22 17 28</h5>
-					</section>
-					<section class="contact__info-location-social">
-						<h3>Location</h4>
-						<h4>Jyderup, Denmark</h5>
-						<h3>Social</h4>
-						<section class="contact__info-socials">
-							<a href="https://www.linkedin.com/in/mikkel-back-koll-21a435b4/" target="_blank">LinkedIn</a>
-							
-						</section>
-					</section>
-				</div>
+				<form class="contact__form">
 
+					<input type="text" class="contact__form-name" placeholder="Name" name="name">
+					<input type="text" class="contact__form-email" placeholder="Email" name="email">
+					<input type="text" class="contact__form-phone" placeholder="Phone" name="phone">
+					<input type="text" class="contact__form-subject" placeholder="Subject" name="subject">
+					<textarea rows="7" class="contact__form-message" placeholder="Message" name="message"></textarea>
+
+					<button class="contact__form-button">Submit</button>
+
+
+				</form>
+
+				<span class="contact__message"></span>
 
 
 
@@ -69,6 +65,7 @@
 
 	<script src="/js/shared.js"></script>
 	<script src="/js/nav.js"></script>
+	<script src="/js/contact.js"></script>
 </body>
 
 </html>
