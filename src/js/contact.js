@@ -2,7 +2,7 @@ let contactFormElem = document.querySelector('.contact__form');
 
 
 
-contactFormElem.addEventListener('submit', (e)=> {
+contactFormElem.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let validate = true;
@@ -22,49 +22,49 @@ contactFormElem.addEventListener('submit', (e)=> {
     message.style.backgroundColor = "rgba(150, 150, 150, 0.226)";
 
 
-    if(name.value == '' || !isNaN(name.value)){
+    if (name.value == '' || !isNaN(name.value)) {
         validate = false;
         name.style.backgroundColor = "red";
     }
 
-    if(email.value == '' || email.value.match(emailRegex) == null){
+    if (email.value == '' || email.value.match(emailRegex) == null) {
         validate = false;
         email.style.backgroundColor = "red";
     }
-    
-    if(phone.value == '' || isNaN(phone.value) || phone.value.length <= 7){
+
+    if (phone.value == '' || isNaN(phone.value) || phone.value.length <= 7) {
         validate = false;
         phone.style.backgroundColor = "red";
     }
 
-    if(subject.value == '') {
+    if (subject.value == '') {
         validate = false;
         subject.style.backgroundColor = "red";
     }
 
-    if(message.value == '') {
+    if (message.value == '') {
         validate = false;
         message.style.backgroundColor = "red";
     }
 
 
-    if(validate) {
+    if (validate) {
 
 
         fetch('https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/send', {
             "method": "POST",
             "headers": {
-                "Content-Type":"application/x-www-form-urlencoded"
+                "Content-Type": "application/x-www-form-urlencoded"
             },
             "body": `name=${name.value}&email=${email.value}&phone=${phone.value}&subject=${subject.value}&message=${message.value}`
         })
-        .then((res) => {
-        console.log('res: ', res);
-            return res.json()
-        })
-        .then((data)=> {
-        console.log('data: ', data);
-        })
+            .then((res) => {
+                console.log('res: ', res);
+                if (res.status === 200) {
+                    contactMessageElem.innerHTML = "Thank you for your message, I will get back to you shortly!";
+                }
+            })
+
 
 
 
