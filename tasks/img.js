@@ -9,8 +9,8 @@ function imageTask(){
 	.pipe(imagemin([
 		recompress({
 			min:40,
-			max:90,
-			target:0.5
+			max:70,
+			target:0.4
 		})
 	]))
 	.pipe(gulp.dest("dist/img"))
