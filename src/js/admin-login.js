@@ -40,6 +40,7 @@ formElem.addEventListener('submit', (e) => {
         }
         else {
             sessionStorage.setItem('idToken', data.idToken);
+            sessionStorage.setItem('refreshToken', data.refreshToken);
             errorMessageElem.innerHTML = "SUCCESS";
         }
         })
