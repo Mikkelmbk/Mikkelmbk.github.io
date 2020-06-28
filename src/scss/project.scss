@@ -17,11 +17,28 @@
 
     .project__wrapper-inner{
         width:80%;
-        height:200px;
         margin: 0 auto;
+        min-height:80vh;
     
         .project__title{
             text-align:center;
         }
     }
+}
+
+
+@media(min-width: 749px){
+
+
+    .project__wrapper-outer{
+    
+        .project__wrapper-inner{
+            width:60%;
+     
+
+        
+           
+        }
+    }
+
 }
