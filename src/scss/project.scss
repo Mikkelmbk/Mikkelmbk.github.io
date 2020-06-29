@@ -18,11 +18,40 @@
     .project__wrapper-inner{
         width:80%;
         margin: 0 auto;
-        min-height:80vh;
-    
+        
         .project__title{
             text-align:center;
+            margin-bottom:5px;
         }
+        hr{
+            margin:0 auto 50px auto;
+            height:6px;
+            width:300px;
+            border:none;
+            background: radial-gradient(ellipse at center, $primary-main-theme 0%, rgba(0, 0, 0, 0) 75%);
+        }
+
+
+        section{
+            background-color:#222;
+            padding:10px;
+            border-radius:5px;
+            margin-bottom:15px;
+            border: 1px solid #333;
+        }
+
+        section h3{
+            margin: 10px;
+            color: $primary-sub-theme;
+            font-weight:400;
+        }
+
+        section p{
+            margin:10px;
+        }
+
+
+        
     }
 }
 
