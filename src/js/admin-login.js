@@ -36,12 +36,14 @@ formElem.addEventListener('submit', (e) => {
         .then((data)=> {
         console.log('data: ', data);
         if(data.error) {
-            errorMessageElem.innerHTML = data.error.message;
+            errorMessageElem.innerHTML = data.error.message;        
         }
         else {
             sessionStorage.setItem('idToken', data.idToken);
             sessionStorage.setItem('refreshToken', data.refreshToken);
             errorMessageElem.innerHTML = "SUCCESS";
+            window.location.replace(`${window.location.origin}/admin/`);
+
         }
         })
         

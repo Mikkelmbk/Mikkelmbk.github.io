@@ -1,0 +1,23 @@
+@import 'variables';
+
+.admin__wrapper-outer{
+    min-height:100vh;
+    background-color: $colored-background;
+    display:flex;
+    flex-direction: column;
+}
+
+
+@media(min-width: 749px){
+
+
+    .admin__wrapper-outer{
+        
+    
+        
+    }
+    
+
+
+
+}
