@@ -5,6 +5,76 @@
     background-color: $colored-background;
     display:flex;
     flex-direction: column;
+    main{
+        display:inherit;
+        flex-grow:1;
+
+        .admin__wrapper-inner{
+            width:90%;
+            margin: 0 auto;
+
+            .admin__navigation{
+                display:flex;
+                list-style-type: none;
+                margin:40px 0;
+                padding:0;
+                justify-content: space-evenly;
+                border-top:3px solid $primary-sub-theme;
+                border-bottom:3px solid $primary-sub-theme;
+                height:40px;
+                align-items: center;
+                border-radius:50px;
+                background-color:#333;
+
+                &-li{
+                    font-size: 1.3em;
+
+                    a{
+                        text-decoration: none;
+                        color:unset;
+                    }
+                    
+                }
+            }
+
+            .admin__table-container{
+                display:flex;
+                justify-content: center;
+                text-align:center;
+                
+
+                .admin-table{
+                    background-color: #333;
+                    border-radius: 5px;
+                    padding: 10px;
+                    th{
+                        color: white;
+                    }
+
+                    tr{
+                        border-bottom:3px solid orange;
+                    }
+
+                    
+    
+                    .gallery-btn-container button{
+                        font-size:1em;
+                        margin:0 4px;
+                        padding:2px 5px;
+                        background-color: $primary-sub-theme;
+                        border-radius:4px;
+                        color:unset;
+                        border: 1px solid black;
+                    }
+                }
+            }
+
+
+
+
+        }
+    }
+
 }
 
 
@@ -13,6 +83,14 @@
 
     .admin__wrapper-outer{
         
+        main{
+           
+    
+            .admin__wrapper-inner{
+                width: 60%;
+               
+            }
+        }
     
         
     }
