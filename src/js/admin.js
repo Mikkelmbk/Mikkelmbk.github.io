@@ -32,7 +32,7 @@ window.addEventListener('hashchange', (e) => {
             <tr><th>Actions</th><th>Title</th></tr>
             `;
             adminTableContainerElem.appendChild(adminTableElem);
-            
+
             console.log('items: ', items);
 
             items.forEach((item) => {
@@ -42,16 +42,16 @@ window.addEventListener('hashchange', (e) => {
                 let adminUpdate = document.createElement('button');
                 let adminDelete = document.createElement('button');
                 let adminTitle = document.createElement('td');
-    
-    
-                adminBtnContainer.classList.add('gallery-btn-container')
+
+
+                adminBtnContainer.classList.add('gallery-btn-container');
                 adminUpdate.innerHTML = "Update";
                 adminUpdate.dataset.id = item.docId;
                 adminDelete.innerHTML = "Delete";
                 adminDelete.dataset.id = item.docId;
                 adminTitle.innerHTML = item.title;
-    
-    
+
+
                 adminTableElem.appendChild(adminTr);
                 adminTr.appendChild(adminBtnContainer);
                 adminBtnContainer.appendChild(adminUpdate);
@@ -59,23 +59,23 @@ window.addEventListener('hashchange', (e) => {
                 adminTr.appendChild(adminTitle);
 
                 adminUpdate.addEventListener('click', (e) => {
-                console.log('e: ', e);
-                    
+                    console.log('e: ', e);
+
                 })
 
                 adminDelete.addEventListener('click', (e) => {
-                console.log('e: ', e);
+                    console.log('e: ', e);
 
-                    if(confirm(`Are you sure you want to delete this item from the ${collectionName.toUpperCase()} list`)){
+                    if (confirm(`Are you sure you want to delete this item from the ${collectionName.toUpperCase()} list`)) {
                         fetch(`https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/delete-${collectionName}/${e.target.dataset.id}`, {
-                            "method":"DELETE",
+                            "method": "DELETE",
                             "headers": {
                                 "Authorization": `Bearer ${sessionStorage.getItem('idToken')}`
                             }
                         })
-                        .then(() => {
-                            window.location.replace(`${window.location.origin}/admin/`);
-                        })
+                            .then(() => {
+                                window.location.replace(`${window.location.origin}/admin/`);
+                            })
                     }
 
 
@@ -84,14 +84,34 @@ window.addEventListener('hashchange', (e) => {
             })
 
 
+            let adminAddTr = document.createElement('tr');
+            let adminAddBtnContainer = document.createElement('td');
+            let adminAdd = document.createElement('button');
 
+            adminAddBtnContainer.classList.add('gallery-btn-container');
+            adminAdd.innerHTML = `Add ${collectionName}`;
+
+            adminTableElem.appendChild(adminAddTr);
+            adminAddTr.appendChild(adminAddBtnContainer);
+            adminAddBtnContainer.appendChild(adminAdd);
+
+
+            adminAdd.addEventListener('click', (e) => {
+            console.log('e: ', e);
+
+            });
+
+
+
+
+
+
+        })
+        .catch((err) => {
+        console.log('err: ', err);
         })
 
 
 
 })
 
-
-function deleteItem(collectionName, docId) {
-
-}
