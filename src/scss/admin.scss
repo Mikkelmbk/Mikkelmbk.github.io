@@ -19,8 +19,7 @@
                 margin:40px 0;
                 padding:0;
                 justify-content: space-evenly;
-                border-top:3px solid $primary-sub-theme;
-                border-bottom:3px solid $primary-sub-theme;
+                border:3px solid $primary-sub-theme;
                 height:40px;
                 align-items: center;
                 border-radius:50px;
@@ -41,9 +40,10 @@
                 display:flex;
                 justify-content: center;
                 text-align:center;
+                margin-bottom:40px;
                 
 
-                .admin-table{
+                .admin__table{
                     background-color: #333;
                     border-radius: 5px;
                     padding: 10px;
@@ -52,12 +52,12 @@
                     }
 
                     tr{
-                        border-bottom:3px solid orange;
+                        // border-bottom:3px solid orange;
                     }
 
                     
     
-                    .gallery-btn-container button{
+                    .admin__btn-container button{
                         font-size:1em;
                         margin:0 4px;
                         padding:2px 5px;
@@ -65,6 +65,25 @@
                         border-radius:4px;
                         color:unset;
                         border: 1px solid black;
+                        cursor:pointer;
+                    }
+                }
+            }
+
+            .admin__form-container{
+                .admin__form{
+                    width:80%;
+                    margin: 0 auto;
+                    input{
+                        width:100%;
+                        box-sizing: border-box;
+                    }
+                    textarea{
+                        width:100%;
+                        box-sizing: border-box;
+                    }
+                    button{
+                        width:100%;
                     }
                 }
             }
@@ -88,6 +107,11 @@
     
             .admin__wrapper-inner{
                 width: 60%;
+
+
+                .admin__table-container{
+                    justify-content: flex-start;
+                }
                
             }
         }
