@@ -36,57 +36,69 @@
                 }
             }
 
-            .admin__table-container{
-                display:flex;
-                justify-content: center;
-                text-align:center;
-                margin-bottom:40px;
-                
+            .admin__content-container{
 
-                .admin__table{
-                    background-color: #333;
-                    border-radius: 5px;
-                    padding: 10px;
-                    th{
-                        color: white;
-                    }
-
-                    tr{
-                        // border-bottom:3px solid orange;
-                    }
-
+                .admin__table-container{
+                    display:flex;
+                    justify-content: center;
+                    text-align:center;
+                    margin-bottom:40px;
                     
     
-                    .admin__btn-container button{
-                        font-size:1em;
-                        margin:0 4px;
-                        padding:2px 5px;
-                        background-color: $primary-sub-theme;
-                        border-radius:4px;
-                        color:unset;
-                        border: 1px solid black;
-                        cursor:pointer;
+                    .admin__table{
+                        background-color: #333;
+                        border-radius: 5px;
+                        padding: 10px;
+                        th{
+                            color: white;
+                        }
+    
+                        .admin__btn-container button{
+                            font-size:1em;
+                            margin:0 4px;
+                            padding:2px 5px;
+                            background-color: $primary-sub-theme;
+                            border-radius:4px;
+                            color:unset;
+                            border: 1px solid black;
+                            cursor:pointer;
+                        }
+                    }
+                }
+                .admin__form-container{
+                    .admin__form{
+                        width:80%;
+                        margin: 0 auto;
+                        textarea,input{
+                            width:100%;
+                            box-sizing: border-box;
+                            margin:3px 0 15px 0;
+                            background-color: $input-background-color;
+                            color:white;
+                            border:none;
+                            border-radius:5px;
+                            padding: 4px 10px;
+                            outline:none;
+                            height:auto;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        button{
+                            width:100%;
+                            background-color: $primary-main-theme;
+                            color:white;
+                            border:none;
+                            outline:none;
+                            height:35px;
+                            border-radius:5px;
+                            margin-bottom:20px;
+                            cursor:pointer;
+    
+                        }
                     }
                 }
             }
 
-            .admin__form-container{
-                .admin__form{
-                    width:80%;
-                    margin: 0 auto;
-                    input{
-                        width:100%;
-                        box-sizing: border-box;
-                    }
-                    textarea{
-                        width:100%;
-                        box-sizing: border-box;
-                    }
-                    button{
-                        width:100%;
-                    }
-                }
-            }
+
 
 
 
@@ -109,9 +121,24 @@
                 width: 60%;
 
 
-                .admin__table-container{
-                    justify-content: flex-start;
+                .admin__content-container{
+                    display:flex;
+                    justify-content: space-evenly;
+
+                    .admin__table-container{
+                        justify-content: flex-start;
+                    }
+
                 }
+                .admin__form-container{
+                    width:60%;
+                    .admin__form{
+                        margin: 0 auto;
+                       
+                    }
+                }
+
+
                
             }
         }
