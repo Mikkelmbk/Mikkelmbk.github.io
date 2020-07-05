@@ -62,6 +62,8 @@ window.addEventListener('hashchange', (e) => {
                 adminTr.appendChild(adminTitle);
 
                 adminUpdate.addEventListener('click', (e) => {
+
+
                     adminFormContainerElem.innerHTML = "";
                     let itemToUpdate = items.find(item => item.docId === e.target.dataset.id);
 
@@ -80,16 +82,17 @@ window.addEventListener('hashchange', (e) => {
 
 
                     properties.forEach((property) => {
-                        console.log('property: ', property);
+                        // console.log('property: ', property);
 
                         let adminInputElem = document.createElement('textarea');
                         let adminLabelElem = document.createElement('label');
                         adminInputElem.placeholder = property[0];
+                        adminInputElem.name = property[0];
                         adminLabelElem.innerHTML = property[0];
-                        if(property[0] === "image"){
+                        if (property[0] === "image") {
                             adminInputElem.value = property[1].split('/img/')[1];
                         }
-                        else{
+                        else {
                             adminInputElem.value = property[1];
                         }
 
@@ -97,11 +100,84 @@ window.addEventListener('hashchange', (e) => {
                         adminFormElem.appendChild(adminLabelElem);
                         adminFormElem.appendChild(adminInputElem);
 
+
+
                     })
 
                     let adminSubmitButton = document.createElement('button');
                     adminSubmitButton.innerHTML = `Update ${itemToUpdate.title}`;
                     adminFormElem.appendChild(adminSubmitButton);
+
+
+
+
+                    adminFormElem.addEventListener('submit', (e) => {
+                        e.preventDefault();
+
+                        if (confirm(`Are you sure you want to update ${itemToUpdate.title} in the ${collectionName} Collection`)) {
+                            let validate = true;
+                            let validateInputElems = document.querySelectorAll('.admin__form textarea');
+
+                            validateInputElems.forEach((validateInputElem) => {
+                                validateInputElem.style.backgroundColor = "rgba(150, 150, 150, 0.226)";
+                                if (validateInputElem.value.trim() == "") {
+                                    validate = false;
+                                    validateInputElem.style.backgroundColor = "red";
+                                }
+                            })
+
+                            if (collectionName === "projects" && validate) {
+
+
+                                fetch(`https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/update-${collectionName}/${itemToUpdate.docId}`, {
+                                    "method":"POST",
+                                    "headers": {
+                                        "Authorization": `Bearer ${sessionStorage.getItem('idToken')}`,
+                                        "Content-Type": "application/x-www-form-urlencoded"
+                                    },
+                                    "body": `domain=${adminFormElem.domain.value.trim()}
+                                    &githubRepo=${adminFormElem.githubRepo.value.trim()}
+                                    &image=${adminFormElem.image.value.trim()}
+                                    &title=${adminFormElem.title.value.trim()}
+                                    &about=${adminFormElem.about.value.trim()}
+                                    &challenges=${adminFormElem.challenges.value.trim()}
+                                    &duration=${adminFormElem.duration.value.trim()}
+                                    &goal=${adminFormElem.goal.value.trim()}
+                                    &process=${adminFormElem.process.value.trim()}
+                                    &team=${adminFormElem.team.value.trim()}
+                                    &technologies=${adminFormElem.technologies.value.trim()}`
+                                })
+                                .then(()=>{
+                                    window.location.replace(`${window.location.origin}/admin/`);
+                                })
+
+                            }
+
+                            if (collectionName === "skills" && validate) {
+
+                                fetch(`https://us-central1-mbk-portfolio.cloudfunctions.net/app/api/update-${collectionName}/${itemToUpdate.docId}`, {
+                                    "method":"POST",
+                                    "headers": {
+                                        "Authorization": `Bearer ${sessionStorage.getItem('idToken')}`,
+                                        "Content-Type": "application/x-www-form-urlencoded"
+                                    },
+                                    "body": `title=${adminFormElem.title.value.trim()}
+                                    &order=${adminFormElem.order.value.trim()}
+                                    `
+                                })
+                                .then(()=>{
+                                    window.location.replace(`${window.location.origin}/admin/`);
+                                })
+
+
+
+                            }
+                        }
+
+                    })
+
+
+
 
 
 
